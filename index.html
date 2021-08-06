@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0
+    }
+
+    .container {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #con {
+        background: rebeccapurple;
+    }
+
+    #con1 {
+        background: red;
+    }
+    #btn{
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        height: 50px;
+        width: 100px;
+        background: black;
+        color: cornsilk;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div class="container" id="con">
+        <button id="btn" onclick="change()">Color Name</button>
+    </div>
+
+</body>
+<script type="text/javascript">
+
+    function change() {
+        var a=Math.round(Math.random()*36)
+        if(a<5){document.getElementById('con').style.background="white";document.getElementById('btn').innerText="white"}
+        else if(a>5 && a<10){ document.getElementById('con').style.background="orange" ; document.getElementById('btn').innerText="orange" }
+        else if(a>11 && a<16){document.getElementById('con').style.background="blue"  ; document.getElementById('btn').innerText="blue" }
+        else if(a>16 && a<21){document.getElementById('con').style.background="red"   ; document.getElementById('btn').innerText="red" }
+        else if(a>21 && a<25){document.getElementById('con').style.background="green" ; document.getElementById('btn').innerText="green" }
+        else if(a>25 && a<30){document.getElementById('con').style.background="yellow"; document.getElementById('btn').innerText="yellow" }
+        else if(a>30 && a<35){document.getElementById('con').style.background="cyan"  ; document.getElementById('btn').innerText="cyan" }
+
+    }
+    setInterval(change,1000)
+</script>
+
+</html>
